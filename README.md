@@ -14,8 +14,3 @@ https://vaibhavirohilla741.github.io/Burger-Builder/
 
 
 
-### Mobile View
-![Mobile-view](https://user-images.githubusercontent.com/62430272/115824445-8bbb8680-a425-11eb-94b6-2f00305e80a0.png)
-![Mobile-sidedrawer](https://user-images.githubusercontent.com/62430272/115824444-8b22f000-a425-11eb-87f5-bb546b764838.png)
-
-![Mobile-modal](https://user-images.githubusercontent.com/62430272/115824441-89f1c300-a425-11eb-8805-3566cc79f7ee.png)
