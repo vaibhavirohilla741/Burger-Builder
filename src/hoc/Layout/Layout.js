@@ -1,44 +1,38 @@
-import React, {Component} from 'react';
-import Aux from '../Auxillary/Auxillary';
-import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
-import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
-import classes from './Layout.module.css'
+import React, { Component } from 'react';
 
-class Layout extends Component  {
+import Aux from '../Auxillary/Auxillary';
+import classes from './Layout.module.css';
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
+import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
+
+class Layout extends Component {
     state = {
         showSideDrawer: false
     }
 
-    showSideDrawerHandler = () => {
-        this.setState({showSideDrawer:false})
+    sideDrawerClosedHandler = () => {
+        this.setState( { showSideDrawer: false } );
     }
 
-    sideDrawerTogglerHandler = () => {
-        this.setState( (prevState) => {
-           return {showSideDrawer:!this.state.showSideDrawer};
-        });
+    sideDrawerToggleHandler = () => {
+        this.setState( ( prevState ) => {
+            return { showSideDrawer: !prevState.showSideDrawer };
+        } );
     }
 
-    render() {
-
+    render () {
         return (
             <Aux>
-                <Toolbar clicked={this.sideDrawerTogglerHandler} />
+                <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} />
                 <SideDrawer
-                 closed={this.showSideDrawerHandler}
-                 open={this.state.showSideDrawer} />
+                    open={this.state.showSideDrawer}
+                    closed={this.sideDrawerClosedHandler} />
                 <main className={classes.Content}>
                     {this.props.children}
                 </main>
             </Aux>
-    
-
-
         )
     }
 }
-
-    
-
 
 export default Layout;
